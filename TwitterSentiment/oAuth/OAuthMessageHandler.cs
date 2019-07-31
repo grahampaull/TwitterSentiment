@@ -2,6 +2,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace TwitterSentiment.OAuth
 {
@@ -11,14 +12,6 @@ namespace TwitterSentiment.OAuth
     /// </summary>
     public class OAuthMessageHandler : DelegatingHandler
     {
-        // Obtain these values by creating a Twitter app at http://dev.twitter.com/
-        private static string _consumerKey = "Enter your consumer key";
-        private static string _consumerSecret = "Enter your consumer secret";
-        private static string _token = "Enter your token";
-        private static string _tokenSecret = "Enter your token secret";
-
-        private OAuthBase _oAuthBase = new OAuthBase();
-
         private readonly string _consumerKey;
         private readonly string _consumerSecret;
         private readonly string _token;
