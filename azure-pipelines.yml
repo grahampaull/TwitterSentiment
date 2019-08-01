@@ -23,4 +23,24 @@ steps:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
 
-- task: PublishBuildArtifacts@1
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack'
+  inputs:
+      command: pack
+      nobuild: true
+      projects: '$(projectName)/$(projectName).csproj'
+      versioningScheme: byPrereleaseNumber
+      versionEnvVar: byPrereleaseNumber
+      majorVersion: 0
+      minorVersion: 1
+      patchVersion: 0
+        
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'push'
+    nuGetFeedType: 'internal'
+    packagesToPush: '$(build.artifactStagingDirectory)/*.nupkg'
+    publishVstsFeed: "GPPackages"
+    publishFeedCredentials: GPPackagesAuth
+           
+- task: PublishBuildArtifacts@1    
