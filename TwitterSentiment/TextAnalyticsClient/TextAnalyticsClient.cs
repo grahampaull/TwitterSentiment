@@ -19,7 +19,7 @@ namespace TwitterSentiment
             _client = client;
             _config = config;
 
-            _client.BaseAddress = new Uri("https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/");
+            _client.BaseAddress = new Uri("https://sentimentanalysisgp.cognitiveservices.azure.com/text/analytics/v2.1/");
             _client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _config["AzureTextAnalytics"]);
         }
 
