@@ -1,1 +1,3 @@
 [![Build Status](https://dev.azure.com/graham0250/TwitterSentiment/_apis/build/status/grahampaull.TwitterSentiment?branchName=master)](https://dev.azure.com/graham0250/TwitterSentiment/_build/latest?definitionId=1&branchName=master)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=0c049cd5a68b41d9a2a7a86884bca79c&metric=alert_status)](https://sonarcloud.io/dashboard?id=0c049cd5a68b41d9a2a7a86884bca79c)
