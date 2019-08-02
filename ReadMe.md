@@ -1,0 +1,1 @@
+[![Build Status](https://dev.azure.com/graham0250/TwitterSentiment/_apis/build/status/grahampaull.TwitterSentiment?branchName=master)](https://dev.azure.com/graham0250/TwitterSentiment/_build/latest?definitionId=1&branchName=master)
